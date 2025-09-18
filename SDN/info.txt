@@ -1,0 +1,22 @@
+sudo apt-get install python3.8 python3.8-venv -y
+python3.8 -m venv ryu-venv
+source ryu-venv/bin/activate
+pip install setuptools==59.5.0
+pip install ryu eventlet==0.30.2
+
+ryu-manager --version
+
+ryu-manager ryu.app.simple_switch
+sudo mn --controller=remote,ip=127.0.0.1,port=6633 --topo=single,3
+
+pingAll
+
+sudo ovs-ofctl dump-flows s1
+sudo ovs-ofctl del-flows s1
+mininet> s1 ovs-vsctl show
+mininet> s1 ovs-vsctl list interface
+
+
+h2 02:99:8d:87:46:e4 
+h1  c6:61:b6:b4:de:30 
+h3 a6:d7:3e:29:1d:b7 
