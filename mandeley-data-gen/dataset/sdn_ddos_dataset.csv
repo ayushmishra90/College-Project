@@ -1,0 +1,1 @@
+dt,dt_epoch,switch_id,src_ip,dst_ip,src_port,dst_port,protocol,packet_count,byte_count,duration_sec,duration_nsec,tx_packets,rx_packets,tx_bytes,rx_bytes,tx_kbps,rx_kbps,bw,packet_rate,flow_entries,packet_in_count,label
